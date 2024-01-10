@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "./Product";
-import Aos from "aos";
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -10,8 +10,12 @@ const ProductLists = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    Aos.init();
-  },[]);
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      offset: 200,    // Offset (in pixels) from the top of the document at which the animation should trigger
+      easing: 'ease-in-out', // Easing type
+    });
+  }, []);
 
   const getProducts = () => {
     fetch(apiUrl)
@@ -57,7 +61,7 @@ const ProductLists = () => {
         </div>
         <div className="row">
           {products.map((product, ind) => {
-            return <Product key={ind} {...product} data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>;
+            return <Product key={ind} {...product} data-aos="fade-up" data-aos-duration="1000"/>;
           })}
         </div>
       </div>
