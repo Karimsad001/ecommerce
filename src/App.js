@@ -8,7 +8,7 @@ function App() {
     <div className='app'>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="https://karimsad001.github.io/ecommerce/" element={<Home />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/product/:productId' element={<ProductDetails />} />
       </Routes>
