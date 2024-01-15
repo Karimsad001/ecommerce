@@ -61,7 +61,7 @@ const ProductLists = () => {
         </div>
         <div className="row">
           {products.map((product, ind) => {
-            return <Product key={ind} {...product} data-aos="fade-up" data-aos-duration="1000"/>;
+            return <Product key={ind} {...product}/>;
           })}
         </div>
       </div>

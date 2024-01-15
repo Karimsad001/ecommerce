@@ -4,7 +4,7 @@ const Product = (props) => {
     const navigate = useNavigate();
     return (
       <div className="col-md-6 col-lg-3 mb-4">
-        <div className="card pt-1" style={{ width: 'calc(100% - 50px)', height: '480px', margin: 'auto' }}>
+        <div className="card pt-1" style={{ width: 'calc(100% - 50px)', height: '480px', margin: 'auto' }}  data-aos="fade-up">
           <img src={props.image} className="card-img-top" alt={props.title} style={{ height: '200px' }} />
           <div className="card-body" >
             <h5 className="card-title" style={{ height: '60px', fontSize: '15px', marginBottom: '20px', overflow: 'auto', textOverflow: 'ellipsis' }}>
